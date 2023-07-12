@@ -1,5 +1,6 @@
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Caroussel extends StatelessWidget {
   const Caroussel({super.key});
@@ -7,18 +8,18 @@ class Caroussel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 14),
+      margin: const EdgeInsets.symmetric(vertical: 20),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Wrap(
           direction: Axis.horizontal,
           children: [
-            _menus("Área Pix",Icons.pix_outlined),
-            _menus("Transferir",Icons.credit_card_off),
-            _menus("Pagar",Icons.credit_card_off),
-            _menus("Recarga de\ncelular",Icons.pix_outlined),
-            _menus("Pedir emprestado",Icons.pix_outlined),
-            _menus("Depositar",Icons.pix_outlined),
+            _menus(title: "Área Pix",icon:Icons.pix_outlined,isFirst:true),
+            _menus(title: "Transferir",icon: Icons.credit_card_off),
+            _menus(title: "Pagar",icon: Icons.credit_card_off),
+            _menus(title: "Recarga de\ncelular",icon: Icons.pix_outlined),
+            _menus(title: "Pedir\nemprestado",icon: Icons.pix_outlined),
+            _menus(title: "Depositar",icon: Icons.pix_outlined),
             
           ],
           ),
@@ -27,10 +28,10 @@ class Caroussel extends StatelessWidget {
   }
 }
 
-_menus(String title, IconData icon){
+_menus({required String title, required IconData icon, bool? isFirst}){
   return Container(
 
-            padding: const EdgeInsets.symmetric(horizontal: 7),
+            padding: (isFirst ?? false) ? const EdgeInsets.only(right: 7, left: 20) : const EdgeInsets.symmetric(horizontal: 7),
 
             child: Column(
               children: [
@@ -38,7 +39,7 @@ _menus(String title, IconData icon){
                   margin: const EdgeInsets.only(bottom: 10),
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(80),
+                    borderRadius: BorderRadius.circular(50),
                     color: greyColor
                   ),
                   child: Icon(icon,size: 20,),

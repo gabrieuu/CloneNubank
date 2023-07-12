@@ -1,4 +1,5 @@
 import 'package:clone_nubank/pages/carrosel/caroussel.dart';
+import 'package:clone_nubank/pages/cartoes/my_card.dart';
 import 'package:clone_nubank/pages/conta/account.dart';
 import 'package:clone_nubank/pages/home/model/header.dart';
 //import 'package:clone_nubank/util/colors.dart';
@@ -38,7 +39,8 @@ class _Home_pageState extends State<Home_page>{
             children: [
               Header(),
               Account(),
-              Caroussel()
+              Caroussel(),
+              MyCards(),
             ],),
         ),
         );
