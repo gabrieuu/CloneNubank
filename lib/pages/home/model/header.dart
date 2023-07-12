@@ -43,7 +43,7 @@ class _HeaderState extends State<Header>{
 
         child: IconButton(
           onPressed: (){},
-          icon: new Icon(MdiIcons.accountOutline, color: Colors.white,),
+          icon: new Icon(MdiIcons.accountOutline, color: Colors.white, size: 17),
           ),
       ),
     );
@@ -59,17 +59,17 @@ class _HeaderState extends State<Header>{
             return IconButton(
               onPressed: () => controllerHomePage.mostrarValor(), 
               icon: new Icon(
-                controllerHomePage.eye ? MdiIcons.eyeOutline : MdiIcons.eyeOffOutline, color: Colors.white,)
+                controllerHomePage.eye ? MdiIcons.eyeOutline : MdiIcons.eyeOffOutline, color: Colors.white, size: 20,)
             );
           }
         ),
         IconButton(
           onPressed: (){}, 
-          icon: new Icon(MdiIcons.helpCircleOutline, color: Colors.white,)
+          icon: new Icon(MdiIcons.helpCircleOutline, color: Colors.white, size: 20,)
         ),
         IconButton(
           onPressed: (){},
-          icon: new Icon(Icons.person_add_alt_1_outlined, color: Colors.white,),
+          icon: new Icon(Icons.person_add_alt_1_outlined, color: Colors.white, size: 20,),
         )
       ],
     );
@@ -78,7 +78,7 @@ class _HeaderState extends State<Header>{
   _welcome(){
     return Container(
       margin: EdgeInsets.only(left: 15, bottom: 20, top: 20),
-      child: const Text("Olá, Gabriel", style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),),
+      child: const Text("Olá, Gabriel", style: TextStyle(color: Colors.white, fontSize: 15),),
     );
   }
 }

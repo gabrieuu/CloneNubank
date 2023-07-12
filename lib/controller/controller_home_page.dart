@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 class ControllerHomePage extends GetxController{
   
   double saldo = 1000.00;
@@ -8,8 +7,7 @@ class ControllerHomePage extends GetxController{
 
   void mostrarValor(){
     eye = !eye;
-
     update();
   }
-
+  
 }
