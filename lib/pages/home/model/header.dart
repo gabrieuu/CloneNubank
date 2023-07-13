@@ -5,6 +5,8 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Header extends StatefulWidget{
+  const Header({Key? key}):super(key : key);
+
   @override
   State<Header> createState() => _HeaderState();
 }
@@ -43,7 +45,7 @@ class _HeaderState extends State<Header>{
 
         child: IconButton(
           onPressed: (){},
-          icon: new Icon(MdiIcons.accountOutline, color: Colors.white, size: 17),
+          icon: Icon(MdiIcons.accountOutline, color: Colors.white, size: 17),
           ),
       ),
     );
@@ -58,18 +60,18 @@ class _HeaderState extends State<Header>{
           builder: (controllerHomePage) {
             return IconButton(
               onPressed: () => controllerHomePage.mostrarValor(), 
-              icon: new Icon(
+              icon: Icon(
                 controllerHomePage.eye ? MdiIcons.eyeOutline : MdiIcons.eyeOffOutline, color: Colors.white, size: 20,)
             );
           }
         ),
         IconButton(
           onPressed: (){}, 
-          icon: new Icon(MdiIcons.helpCircleOutline, color: Colors.white, size: 20,)
+          icon: Icon(MdiIcons.helpCircleOutline, color: Colors.white, size: 20,)
         ),
         IconButton(
           onPressed: (){},
-          icon: new Icon(Icons.person_add_alt_1_outlined, color: Colors.white, size: 20,),
+          icon: const Icon(Icons.person_add_alt_1_outlined, color: Colors.white, size: 20,),
         )
       ],
     );
@@ -77,7 +79,7 @@ class _HeaderState extends State<Header>{
 
   _welcome(){
     return Container(
-      margin: EdgeInsets.only(left: 15, bottom: 20, top: 20),
+      margin: const EdgeInsets.only(left: 15, bottom: 20, top: 20),
       child: const Text("Olá, Gabriel", style: TextStyle(color: Colors.white, fontSize: 15),),
     );
   }

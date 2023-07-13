@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nubank',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Home_page()
+      home: const HomePage()
     );
   }
 }
