@@ -1,26 +1,39 @@
 import 'package:get/get.dart';
 class ControllerHomePage extends GetxController{
   
-  double saldo = 1000.00;
-  double fatura = 680.40;
-  double limite = 1000.00;
-  double emprestimo = 10000;
-  bool eye = true;
+  double _saldo = 1000.00;
+  double _fatura = 680.40;
+  double _limite = 1000.00;
+  double _emprestimo = 10000;
+  double _dinheiroGuardado = 0;
+  bool _eye = true;
 
 
   void mostrarValor(){
-    eye = !eye;
+    _eye = !_eye;
     update();
   }
-
+  double getDinheiroGuardado(){
+    return _dinheiroGuardado;
+  }
   double getLimiteDisponivel(){
-    return limite-fatura;
+    return _limite-_fatura;
   }
-  
   double getEmprestimo(){
-    return emprestimo;
+    return _emprestimo;
   }
-
+  double getSaldo(){
+    return _saldo;
+  }
+  double getFatura(){
+    return _fatura;
+  }
+  double getLimite(){
+    return _limite;
+  }
+  bool getEye(){
+    return _eye;
+  }
   String formatCurrency(double value) { // formata o saldo para modelo brasileiro
     
     String stringValue = value.toStringAsFixed(2); // Converte para uma string com duas casas decimais

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:clone_nubank/pages/account/account_page.dart';
 import 'package:clone_nubank/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,10 @@ class MyApp extends StatelessWidget {
       title: 'Nubank',
       scrollBehavior: MyCustomScrollBehavior(),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: const HomePage()
+      routes:{
+        "/" : (context) => HomePage(),
+        "/account" : (context) => const AccountPage(),
+      } ,
     );
   }
 }

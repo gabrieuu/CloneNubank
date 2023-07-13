@@ -1,11 +1,12 @@
-import 'package:clone_nubank/pages/carrosel/caroussel.dart';
-import 'package:clone_nubank/pages/cartao_credito/credit_card.dart';
-import 'package:clone_nubank/pages/cartoes/my_card.dart';
-import 'package:clone_nubank/pages/conta/account.dart';
-import 'package:clone_nubank/pages/emprestimos/emprestimo_page.dart';
-import 'package:clone_nubank/pages/home/model/header.dart';
-import 'package:clone_nubank/pages/investimentos/investimetoPage.dart';
-import 'package:clone_nubank/pages/notification/notification.dart';
+
+import 'package:clone_nubank/pages/home/model/carrosel/caroussel.dart';
+import 'package:clone_nubank/pages/home/model/cartao_credito/credit_card.dart';
+import 'package:clone_nubank/pages/home/model/cartoes/my_card.dart';
+import 'package:clone_nubank/pages/home/model/conta/account.dart';
+import 'package:clone_nubank/pages/home/model/emprestimos/emprestimo_page.dart';
+import 'package:clone_nubank/pages/home/model/header/header.dart';
+import 'package:clone_nubank/pages/home/model/investimentos/investimeto_page.dart';
+import 'package:clone_nubank/pages/home/model/notification/notification.dart';
 import 'package:clone_nubank/util/colors.dart';
 //import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';

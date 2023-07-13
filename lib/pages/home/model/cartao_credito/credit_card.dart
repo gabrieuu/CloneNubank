@@ -58,7 +58,7 @@ class _CreditCardState extends State<CreditCard> {
       builder: (controller){
         return Container(
           margin: const EdgeInsets.symmetric(vertical: 2),
-          child: Text(controller.formatCurrency(controller.fatura), style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)
+          child: Text(controller.formatCurrency(controller.getFatura()), style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)
           );
       }
       );

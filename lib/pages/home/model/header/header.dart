@@ -61,7 +61,7 @@ class _HeaderState extends State<Header>{
             return IconButton(
               onPressed: () => controllerHomePage.mostrarValor(), 
               icon: Icon(
-                controllerHomePage.eye ? MdiIcons.eyeOutline : MdiIcons.eyeOffOutline, color: Colors.white, size: 20,)
+                controllerHomePage.getEye() ? MdiIcons.eyeOutline : MdiIcons.eyeOffOutline, color: Colors.white, size: 20,)
             );
           }
         ),

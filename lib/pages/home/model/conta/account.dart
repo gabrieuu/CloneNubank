@@ -13,17 +13,25 @@ class Account extends StatefulWidget {
 class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(left:20, right: 20,top:15),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        
-        children: [
-           _accountChevron(),
-           const SizedBox(height: 5,),
-          _saldo(),
-        ]
+    return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, "/account");
+      },
+
+      child: InkWell(
+        child: Container(
+          margin: const EdgeInsets.only(left:20, right: 20,top:15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            
+            children: [
+               _accountChevron(),
+               const SizedBox(height: 5,),
+              _saldo(),
+            ]
+            ),
         ),
+      ),
     );
   }
 
@@ -40,7 +48,7 @@ class _AccountState extends State<Account> {
     return GetBuilder<ControllerHomePage>(           
             init: ControllerHomePage(),
             builder: (controllerHomePage){           
-              return Text(controllerHomePage.formatCurrency(controllerHomePage.saldo),style: const TextStyle(fontWeight: FontWeight.bold),);
+              return Text(controllerHomePage.formatCurrency(controllerHomePage.getSaldo()),style: const TextStyle(fontWeight: FontWeight.bold),);
             },
           );
   }

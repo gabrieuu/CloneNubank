@@ -1,7 +1,5 @@
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class InvestimentosPage extends StatelessWidget {
   const InvestimentosPage({super.key});
@@ -49,7 +47,7 @@ class InvestimentosPage extends StatelessWidget {
             margin: const EdgeInsets.only(right: 5),
             child: const Icon(Icons.payments_outlined,size: 15,),
           ),
-          Text("Consultar saldo para transferência", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),)
+          const Text("Consultar saldo para transferência", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),)
         ],
       ),
     );
