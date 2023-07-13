@@ -4,6 +4,7 @@ class ControllerHomePage extends GetxController{
   double saldo = 1000.00;
   double fatura = 680.40;
   double limite = 1000.00;
+  double emprestimo = 10000;
   bool eye = true;
 
 
@@ -16,6 +17,10 @@ class ControllerHomePage extends GetxController{
     return limite-fatura;
   }
   
+  double getEmprestimo(){
+    return emprestimo;
+  }
+
   String formatCurrency(double value) { // formata o saldo para modelo brasileiro
     
     String stringValue = value.toStringAsFixed(2); // Converte para uma string com duas casas decimais

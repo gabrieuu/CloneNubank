@@ -46,7 +46,7 @@ class _CreditCardState extends State<CreditCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Cartão de crédito", style: TextStyle(fontWeight: FontWeight.bold),),
+                const Text("Cartão de crédito", style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
                 Icon(MdiIcons.chevronRight)
               ],
             ),
