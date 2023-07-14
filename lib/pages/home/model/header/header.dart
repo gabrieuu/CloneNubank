@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -55,8 +55,8 @@ class _HeaderState extends State<Header>{
     return Row(
       children: [
 
-        GetBuilder<ControllerHomePage>(
-          init: ControllerHomePage(),
+        GetBuilder<UsersController>(
+          init: UsersController(),
           builder: (controllerHomePage) {
             return IconButton(
               onPressed: () => controllerHomePage.mostrarValor(), 

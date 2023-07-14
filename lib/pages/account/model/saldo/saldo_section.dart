@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -20,7 +20,7 @@ class _SaldoAccountState extends State<SaldoAccount> {
         children: [
           Text("Saldo disponível", style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, color: greyT),),
           GetBuilder(
-            init: ControllerHomePage(),
+            init: UsersController(),
             builder: (controller) {
               return Text(controller.formatCurrency(controller.getSaldo()),style: const TextStyle(fontSize: 25,fontWeight: FontWeight.bold),);
             }

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       scrollBehavior: MyCustomScrollBehavior(),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       routes:{
-        "/" : (context) => HomePage(),
+        "/" : (context) => const HomePage(),
         "/account" : (context) => const AccountPage(),
       } ,
     );

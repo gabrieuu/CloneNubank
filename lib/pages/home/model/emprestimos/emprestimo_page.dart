@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -52,8 +52,8 @@ class _EmprestimoPageState extends State<EmprestimoPage> {
   _valueEmprestimo(){
     return Container(
       margin: const EdgeInsets.only(top:5),
-      child: GetBuilder<ControllerHomePage>(
-        init: ControllerHomePage(),
+      child: GetBuilder<UsersController>(
+        init: UsersController(),
         builder:(controller){
           return Text(controller.formatCurrency(controller.getEmprestimo()),style: const TextStyle(fontSize: 12,fontWeight: FontWeight.bold),);
         }

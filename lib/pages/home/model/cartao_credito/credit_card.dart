@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -53,8 +53,8 @@ class _CreditCardState extends State<CreditCard> {
     );
   }
   _faturaAtual(){
-    return GetBuilder<ControllerHomePage>(
-      init: ControllerHomePage(),
+    return GetBuilder<UsersController>(
+      init: UsersController(),
       builder: (controller){
         return Container(
           margin: const EdgeInsets.symmetric(vertical: 2),
@@ -64,8 +64,8 @@ class _CreditCardState extends State<CreditCard> {
       );
   }
   _limiteDisponivelLabel(){
-    return GetBuilder<ControllerHomePage>(
-      init: ControllerHomePage(),
+    return GetBuilder<UsersController>(
+      init: UsersController(),
       builder: (controller){
         return Container(
           margin: const EdgeInsets.only(bottom: 10),

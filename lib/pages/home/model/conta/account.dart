@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -45,8 +45,8 @@ class _AccountState extends State<Account> {
           );
   }
   _saldo(){
-    return GetBuilder<ControllerHomePage>(           
-            init: ControllerHomePage(),
+    return GetBuilder<UsersController>(           
+            init: UsersController(),
             builder: (controllerHomePage){           
               return Text(controllerHomePage.formatCurrency(controllerHomePage.getSaldo()),style: const TextStyle(fontWeight: FontWeight.bold),);
             },

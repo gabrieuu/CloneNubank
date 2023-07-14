@@ -1,13 +1,12 @@
 import 'package:get/get.dart';
-class ControllerHomePage extends GetxController{
-  
+class UsersController extends GetxController{
+  String _nome = "Gabriel Barbosa da Silva";
   double _saldo = 1000.00;
   double _fatura = 680.40;
   double _limite = 1000.00;
   double _emprestimo = 10000;
   double _dinheiroGuardado = 0;
   bool _eye = true;
-
 
   void mostrarValor(){
     _eye = !_eye;
@@ -34,6 +33,9 @@ class ControllerHomePage extends GetxController{
   bool getEye(){
     return _eye;
   }
+  String getName(){
+    return _nome;
+  }
   String formatCurrency(double value) { // formata o saldo para modelo brasileiro
     
     String stringValue = value.toStringAsFixed(2); // Converte para uma string com duas casas decimais
@@ -55,4 +57,8 @@ class ControllerHomePage extends GetxController{
 
   return formattedValue;
 }
+}
+
+class Historico extends UsersController{
+  Historico();
 }

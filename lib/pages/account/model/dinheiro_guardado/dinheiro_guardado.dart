@@ -1,4 +1,4 @@
-import 'package:clone_nubank/controller/controller_home_page.dart';
+import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:clone_nubank/util/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -40,12 +40,10 @@ class _DinheiroGuardadoState extends State<DinheiroGuardado> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Dinheiro guardado", style: TextStyle(fontSize: 11, color: greyT, fontWeight: FontWeight.bold),),
-                  GetBuilder<ControllerHomePage>(
-                    init: ControllerHomePage(),
+                  GetBuilder<UsersController>(
+                    init: UsersController(),
                     builder: (controller){
-                      return Container(
-                        child: Text(controller.formatCurrency(controller.getDinheiroGuardado()), style: TextStyle(fontWeight: FontWeight.bold),),
-                      );
+                      return Text(controller.formatCurrency(controller.getDinheiroGuardado()), style: const TextStyle(fontWeight: FontWeight.bold),);
                     }
                     ),
                 ],
