@@ -47,7 +47,7 @@ class InvestimentosPage extends StatelessWidget {
             margin: const EdgeInsets.only(right: 5),
             child: const Icon(Icons.payments_outlined,size: 15,),
           ),
-          const Text("Consultar saldo para transferência", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),)
+          const Text("Consultar saldo para transferência", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),)
         ],
       ),
     );

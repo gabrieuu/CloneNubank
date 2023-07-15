@@ -1,13 +1,18 @@
+import 'package:clone_nubank/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../colors.dart';
 class CircleWidget extends StatelessWidget {
     
     final String? title;
+    final double titleSize;
     final IconData icon;
     final bool? isFirst;
     final double? paddingValue;
     final double ? iconSize;
+    final Widget? link;
+
 
   const CircleWidget({ 
     Key? key,
@@ -15,7 +20,9 @@ class CircleWidget extends StatelessWidget {
     required this.icon, 
     this.isFirst = false,
     this.paddingValue = 15,
-    this.iconSize
+    this.iconSize,
+    this.titleSize = 11,
+    this.link,
   }):super(key:key);
 
   @override
@@ -26,20 +33,32 @@ class CircleWidget extends StatelessWidget {
 
             child: Column(
               children: [
-                Container(
-
-                  margin: const EdgeInsets.only(bottom: 10),
-                  padding: EdgeInsets.all(paddingValue ?? 15), //padding por parametro
-
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: greyColor,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context, 
+                      PageTransition(
+                        child: (link?? const HomePage()), 
+                        type: PageTransitionType.bottomToTop,
+                        
+                      )
+                      );
+                  },
+                  child: Container(
+                
+                    margin: const EdgeInsets.only(bottom: 10),
+                    padding: EdgeInsets.all(paddingValue ?? 15), //padding por parametro
+                
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: greyColor,
+                    ),
+                
+                    child: Icon(icon,size: iconSize,),
                   ),
-
-                  child: Icon(icon,size: iconSize,),
                 ),
 
-              Text((title ?? ""), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 11),),
+              Text((title ?? ""), style: TextStyle(fontWeight: FontWeight.bold, fontSize: titleSize),),
 
               ],
               ),

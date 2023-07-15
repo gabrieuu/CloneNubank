@@ -1,7 +1,9 @@
 import 'package:clone_nubank/controller/controller_user.dart';
+import 'package:clone_nubank/pages/account/account_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Account extends StatefulWidget {
   const Account({Key? key}):super(key:key);
@@ -15,7 +17,12 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context, "/account");
+        Navigator.push(
+          context, 
+          PageTransition(
+            child: const AccountPage(),
+            type: PageTransitionType.rightToLeft
+            ));
       },
 
       child: InkWell(
