@@ -63,13 +63,11 @@ class _HistoricoSaldoState extends State<HistoricoSaldo> {
   }
  
   _historico(){
-    return Container(
-      child: Row(
-        children: [
-          const CircleWidget(icon:Icons.payments_outlined, iconSize: 20, paddingValue: 10,),
-          _movimentation(),
-        ],
-      ),
+    return Row(
+      children: [
+        const CircleWidget(icon:Icons.payments_outlined, iconSize: 20, paddingValue: 10,),
+        _movimentation(),
+      ],
     );
   }
 }

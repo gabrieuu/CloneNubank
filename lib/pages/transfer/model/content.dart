@@ -1,7 +1,6 @@
 import 'package:clone_nubank/controller/controller_user.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../util/colors.dart';
 
 class ContentTransfer extends StatefulWidget {
@@ -15,13 +14,13 @@ class _ContentTransferState extends State<ContentTransfer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text("Qual é o valor da transferência?",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
           _labelText(),
-
+          _inputText(),
         ],
       ),
     );
@@ -45,5 +44,16 @@ class _ContentTransferState extends State<ContentTransfer> {
                 );
             },
             );
+  }
+  _inputText(){
+    return GestureDetector(
+      child:  TextField(
+        onTap: (){
+          
+        },
+        decoration: const InputDecoration(
+          hintText: "R\$ 0,00",
+        ) ,
+    ));
   }
 }

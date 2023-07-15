@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../util/colors.dart';
 import '../../util/widgets/nav_bar_back.dart';
 
 class LoanPage extends StatelessWidget {
@@ -36,10 +35,5 @@ class LoanPage extends StatelessWidget {
           ],),
         );
   }
-  _divider(){
-  return Divider(
-              color: greyColor,
-              thickness: 2,
-            );
-}
+
 }

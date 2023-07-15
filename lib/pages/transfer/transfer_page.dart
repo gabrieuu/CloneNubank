@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../../util/colors.dart';
 import '../../util/widgets/nav_bar_back.dart';
 import 'model/content.dart';
 
@@ -13,6 +11,11 @@ class TransferPage extends StatelessWidget {
     return Scaffold(
       appBar: _appBar(),
       body: _body(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        mini: true,
+        child: const Icon(Icons.arrow_forward_outlined, size: 20,),
+        ),
     );
   }
 
@@ -38,10 +41,4 @@ class TransferPage extends StatelessWidget {
           ],),
         );
   }
-  _divider(){
-  return Divider(
-              color: greyColor,
-              thickness: 2,
-            );
-}
 }

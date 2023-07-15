@@ -1,7 +1,5 @@
- import 'package:clone_nubank/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:page_transition/page_transition.dart';
 
 import '../colors.dart';
 

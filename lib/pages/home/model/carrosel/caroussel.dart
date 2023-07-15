@@ -1,5 +1,4 @@
 import 'package:clone_nubank/pages/pay/pay_page.dart';
-import 'package:clone_nubank/pages/pix/model/enviar_pix/enviar_pix.dart';
 import 'package:clone_nubank/pages/pix/pix_page.dart';
 import 'package:clone_nubank/pages/received/receive_page.dart';
 import 'package:clone_nubank/pages/recharge/recharge_page.dart';

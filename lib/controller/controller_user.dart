@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 class UsersController extends GetxController{
-  String _nome = "Gabriel Barbosa da Silva";
-  double _saldo = 1000.00;
-  double _fatura = 680.40;
-  double _limite = 1000.00;
-  double _emprestimo = 10000;
-  double _dinheiroGuardado = 0;
+  final String _nome = "Gabriel Barbosa da Silva";
+  final double _saldo = 1000.00;
+  final double _fatura = 680.40;
+  final double _limite = 1000.00;
+  final double _emprestimo = 10000;
+  final double _dinheiroGuardado = 0;
   bool _eye = true;
 
   void mostrarValor(){

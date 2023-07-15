@@ -5,7 +5,7 @@ import 'package:clone_nubank/util/widgets/nav_bar_back.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../util/colors.dart';
+
 
 class PixPage extends StatelessWidget {
   const PixPage({super.key});
@@ -39,10 +39,4 @@ class PixPage extends StatelessWidget {
         ReceberPix(),
       ],);
   }
-  _divider(){
-  return Divider(
-              color: greyColor,
-              thickness: 2,
-            );
-}
 }

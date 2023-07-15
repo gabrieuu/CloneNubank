@@ -2,7 +2,7 @@ import 'package:clone_nubank/util/widgets/nav_bar_back.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../util/colors.dart';
+
 
 class ReceivedPage extends StatelessWidget {
   const ReceivedPage({super.key});
@@ -36,10 +36,4 @@ class ReceivedPage extends StatelessWidget {
           ],),
         );
   }
-  _divider(){
-  return Divider(
-              color: greyColor,
-              thickness: 2,
-            );
-}
 }
