@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   material_design_icons_flutter: ^7.0.7296
   page_transition: ^2.0.9
-  mask_text_input_formatter: ^2.5.0
   get: ^4.6.5
   
 dev_dependencies:
